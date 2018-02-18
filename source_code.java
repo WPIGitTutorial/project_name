@@ -5,12 +5,13 @@ Photo photo = new Photo("dog.jpg", 12345);
 activate_camera();
 take_photo();
 
-if (pictureSize >= 5000){
+if (pictureSize >= 1000){
 	System.out.println("Photo too large");
+	askForNewPhoto();
 }
-photo.process();
-
-
+else{
+	photo.process();
+}
 
 Gallery gallery = new Gallery();
 gallery.fill();
